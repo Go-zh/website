@@ -149,11 +149,11 @@ Go 的基本类型有
 
 没有明确初始化的变量声明会被赋予对应类型的 *零值*。
 
-The zero value is:
+不同类型的零值：
 
-- `0` for numeric types,
-- `false` for the boolean type, and
-- `""` (the empty string) for strings.
+- 数值类型为 `0`
+- 布尔类型为 `false`
+- 字符串类型为 `""`（空字符串）
 
 .play basics/zero.go
 

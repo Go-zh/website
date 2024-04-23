@@ -6,7 +6,7 @@ https://github.com/Go-zh/website
 
 * Go 协程
 
-A _goroutine_ is a lightweight thread managed by the Go runtime.
+*Go 协程（Goroutine）* 是由 Go 的运行时管理的轻量级线程。
 
 	go f(x, y, z)
 
@@ -61,9 +61,9 @@ Go 程在相同的地址空间中运行，因此在访问共享的内存时必�
 
 循环 `for`i`:=`range`c` 会不断从信道接收值，直到它被关闭。
 
-*注意：* 只应由发送者关闭信道，而不应油接收者关闭。向一个已经关闭的信道发送数据会引发程序 panic。
+*注意* ：只应由发送者关闭信道，而不应油接收者关闭。向一个已经关闭的信道发送数据会引发程序 panic。
 
-*还要注意：* 信道与文件不同，通常情况下无需关闭它们。只有在必须告诉接收者不再有需要发送的值时才有必要关闭，例如终止一个 `range` 循环。
+*还要注意* ：信道与文件不同，通常情况下无需关闭它们。只有在必须告诉接收者不再有需要发送的值时才有必要关闭，例如终止一个 `range` 循环。
 
 .play concurrency/range-and-close.go
 
@@ -158,7 +158,7 @@ Go 标准库中提供了 [[/pkg/sync/#Mutex][`sync.Mutex`]] 互斥锁类型及�
 
 修改 `Crawl` 函数来并行地抓取 URL，并且保证不重复。
 
-*提示：* 你可以用一个 map 来缓存已经获取的 URL，但是要注意 map 本身并不是并发安全的！
+*提示* ：你可以用一个 map 来缓存已经获取的 URL，但是要注意 map 本身并不是并发安全的！
 
 .play concurrency/exercise-web-crawler.go
 
